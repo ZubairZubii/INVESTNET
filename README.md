@@ -9,7 +9,10 @@ Add-On Panel (User Panel)	4
 
 Introduction
 InvestNet is a dynamic web platform designed to connect investment seekers and investors in a focused networking environment. Unlike general professional networks, InvestNet exclusively caters to individuals and entities within the investment ecosystem. The platform empowers users to discover funding opportunities, connect with potential investors, and build meaningful relationships, while also providing tools to track, manage, and analyze investments. Additionally, users can view a personalized feed, post updates or opportunities like investors and investment seekers, explore detailed profiles of businesses and investors, and apply for internships (paid or unpaid) or jobs in startups. This comprehensive system fosters a streamlined and collaborative experience, enabling investment givers and seekers to collaborate on promising projects, business ideas, and career opportunities
+
+
 2. Project Details
+
 1. Admin Panel
 Modules and Features:
 1.	User Management:
@@ -29,6 +32,10 @@ o	Generate reports on platform activity, including user engagement and financial
 o	View metrics for platform-wide performance (revenue, activity logs).
 5.	Notifications:
 o	Send notifications to users regarding registration status, policy updates, and flagged content decisions.
+
+
+
+
 
 2. Investor Panel
 Modules and Features:
