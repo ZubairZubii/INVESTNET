@@ -3,8 +3,13 @@
 ## Project Overview
 The InvestNet Admin Panel is a powerful and modern web application designed to manage the core functionalities of the InvestNet platform. It provides administrators with a centralized interface to oversee user activity, business verifications, content moderation, analytics, and system settings. Built with React.js for the frontend and Node.js/Express for the backend, it offers a robust and scalable solution for administrative tasks.
 
-## Features
+![1](https://github.com/user-attachments/assets/8b42ab3f-495a-4435-b612-8c3ad382420a)
+![2](https://github.com/user-attachments/assets/b0a7ad8a-a89d-4d01-bf29-5fd16831b676)
+![3](https://github.com/user-attachments/assets/4d25ba8d-68fb-452a-9183-71a47b1ad7c8)
+![4](https://github.com/user-attachments/assets/ad5c202c-92a9-4c3d-8875-c3db6e8878d9)
+![5](https://github.com/user-attachments/assets/fa675d3e-b3a2-4218-8e42-9d9dd19c10f8)
 
+## Features
 ### Admin Dashboard
 *   **Overview**: A centralized hub providing quick insights into key metrics, user growth, and system status.
 *   **Modern UI**: Enhanced with Material-UI components for a sleek and professional aesthetic.
