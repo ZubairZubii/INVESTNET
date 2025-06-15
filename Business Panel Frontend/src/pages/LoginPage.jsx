@@ -15,7 +15,7 @@ const LoginPage = () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       console.log("User signed in with Google:", result.user);
-      navigate("/dashboard"); // Navigate to dashboard or desired page
+      navigate("/profile"); // Changed from /dashboard to /profile
     } catch (error) {
       console.error("Error during Google sign-in:", error.message);
     }
@@ -31,7 +31,7 @@ const LoginPage = () => {
         password
       );
       console.log("User signed in with email:", userCredential.user);
-      navigate("/dashboard"); // Navigate to dashboard or desired page
+      navigate("/profile"); // Changed from /dashboard to /profile
     } catch (error) {
       console.error("Error during email sign-in:", error.message);
     }
@@ -99,7 +99,7 @@ const LoginPage = () => {
           </button>
 
           <div className="login-footer">
-            Don’t have an account?{" "}
+            Don't have an account?{" "}
             <a href="/signup" onClick={handleSignupRedirect}>
               Sign Up
             </a>

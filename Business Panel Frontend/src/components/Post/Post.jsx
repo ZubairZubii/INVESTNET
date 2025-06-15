@@ -7,7 +7,7 @@ const Post = ({ post }) => {
       <div className="post-header">
         <div className="author-info">
           <img
-            src="https://via.placeholder.com/40"
+            src={post.authorAvatar}
             alt="Author"
             className="author-pic"
           />
@@ -17,12 +17,18 @@ const Post = ({ post }) => {
       </div>
       <div className="post-content">
         <p>{post.content}</p>
-        {post.image && <img src={post.image} alt="Post content" />}
+        {post.image && <img src={post.image} alt="Post content" className="post-image" />}
       </div>
       <div className="post-actions">
-        <span>{post.likes} Likes</span>
-        <span>{post.comments} Comments</span>
-        <span>{post.shares} Shares</span>
+        <span className="action-item">
+          <span className="material-icons">thumb_up</span> {post.likes} Likes
+        </span>
+        <span className="action-item">
+          <span className="material-icons">comment</span> {post.comments} Comments
+        </span>
+        <span className="action-item">
+          <span className="material-icons">share</span> {post.shares} Shares
+        </span>
       </div>
     </div>
   );

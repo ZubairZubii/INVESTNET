@@ -1,13 +1,17 @@
 import React from "react";
 import "./Messages.css";
 
-const MessageList = ({ conversations, onSelectConversation }) => {
+const MessageList = ({ conversations, onSelectConversation, selectedConversationIndex }) => {
   return (
     <div className="message-list">
       <h3>Messages</h3>
       <ul>
         {conversations.map((conversation, index) => (
-          <li key={index} onClick={() => onSelectConversation(index)}>
+          <li 
+            key={index} 
+            onClick={() => onSelectConversation(index)}
+            className={index === selectedConversationIndex ? "active" : ""}
+          >
             <img
               src={conversation.avatar}
               alt={conversation.name}

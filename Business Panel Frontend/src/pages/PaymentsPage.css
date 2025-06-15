@@ -1,83 +1,260 @@
-.payments-page {
+.payments-page-container {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
-.content-container {
-  display: flex;
+.main-content {
   flex: 1;
+  margin-left: 280px; /* Adjust for sidebar width */
+  padding: 2rem;
+  background-color: #f5f5f5;
 }
 
 .payments-content {
-  flex: 1;
-  padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Spacing between sections */
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
 }
 
 /* Current Deal Section */
-.current-deal {
-  margin-bottom: 20px;
+.current-deal-section {
+  /* No specific styles needed here, managed by .payments-content gap */
 }
 
 .deal-card {
   background: #ffffff;
-  padding: 20px;
-  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  border: 1px solid #eee;
   border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.progress-bar {
+.deal-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.deal-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.amount-total {
+  color: #333;
+  font-weight: 700;
+}
+
+.amount-received {
+  color: #28a745; /* Green for received amount */
+  font-weight: 700;
+}
+
+.deal-deadline {
+  font-style: italic;
+  color: #999;
+}
+
+.progress-bar-container {
   height: 10px;
-  background: #e0e0e0;
+  background: #e9ecef;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 1rem 0;
+  overflow: hidden;
 }
 
-.progress {
+.progress-fill {
   height: 100%;
-  background: #008b8b;
+  background: #007bff; /* Blue for progress */
   border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.btn.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.btn.btn-primary:hover {
+  background-color: #555;
 }
 
 /* Payment History Table */
-.payment-history {
-  margin-bottom: 20px;
+.payment-history-section {
+  /* No specific styles needed here, managed by .payments-content gap */
+}
+
+.table-responsive {
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
 }
 
 .history-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures rounded corners are applied */
 }
 
 .history-table th,
 .history-table td {
-  padding: 10px;
+  padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #eee;
 }
 
-.status.completed {
-  color: green;
+.history-table th {
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
 }
 
-.status.pending {
-  color: orange;
+.history-table tbody tr:last-child td {
+  border-bottom: none;
 }
 
-.status.failed {
-  color: red;
+.history-table tbody tr:hover {
+  background-color: #f0f0f0; /* Subtle hover effect */
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.status-icon {
+  font-size: 1rem;
+}
+
+.status-completed {
+  background-color: #28a745; /* Green */
+}
+
+.status-pending {
+  background-color: #ffc107; /* Yellow/Orange */
+  color: #333; /* Darker text for better contrast */
+}
+
+.status-cancelled {
+  background-color: #dc3545; /* Red */
 }
 
 /* Summary Section */
-.summary {
-  margin-top: 20px;
+.summary-section {
+  /* No specific styles needed here, managed by .payments-content gap */
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
 .summary-card {
   background: #ffffff;
-  padding: 20px;
-  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  border: 1px solid #eee;
   border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.summary-card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 80px; /* Adjust for collapsed sidebar */
+    padding: 1.5rem;
+  }
+
+  .payments-content {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .summary-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* Full width on smaller screens */
+  }
+
+  .payments-page-container {
+    flex-direction: column; /* Stack sidebar and content */
+  }
+
+  .payments-content {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .deal-card, .summary-card {
+    padding: 1rem;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .summary-cards {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+
+  .btn.btn-primary {
+    width: 100%;
+  }
 }

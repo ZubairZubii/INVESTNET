@@ -12,19 +12,38 @@ const Notifications = () => {
       const newNotifications = [
         {
           id: 1,
+          type: "comment",
           message: "John commented on your post",
           time: "2 minutes ago",
+          icon: "comment",
         },
         {
           id: 2,
+          type: "connection_request",
           message: "Sarah sent you a connection request",
           time: "10 minutes ago",
+          icon: "person_add",
         },
-        { id: 3, message: "Mike liked your photo", time: "1 hour ago" },
+        {
+          id: 3,
+          type: "like",
+          message: "Mike liked your photo",
+          time: "1 hour ago",
+          icon: "thumb_up",
+        },
         {
           id: 4,
+          type: "job_recommendation",
           message: "New job recommendation for you",
           time: "5 hours ago",
+          icon: "work",
+        },
+        {
+          id: 5,
+          type: "message",
+          message: "You have a new message from InvestNet support",
+          time: "1 day ago",
+          icon: "email",
         },
       ];
       setNotifications(newNotifications);
@@ -34,19 +53,33 @@ const Notifications = () => {
   }, []);
 
   return (
-    <div className="notifications-container">
+    <div className="notifications-page">
       <Sidebar /> {/* Include Sidebar */}
-      <div className="notifications-content">
+      <div className="main-content">
         <Header />
-        <div className="content-wrapper">
+        <div className="notifications-wrapper">
+          <div className="page-header">
+            <h2>Notifications</h2>
+            <div className="filter-options">
+              <button className="filter-button active">All</button>
+              <button className="filter-button">Unread</button>
+              <button className="filter-button">Archived</button>
+            </div>
+          </div>
           <div className="search-bar">
+            <span className="material-icons search-icon">search</span>
             <input type="text" placeholder="Search notifications..." />
           </div>
           <div className="notification-list">
             {notifications.map((notification) => (
               <div key={notification.id} className="notification-card">
-                <p className="notification-message">{notification.message}</p>
-                <span className="notification-time">{notification.time}</span>
+                <div className="notification-icon-wrapper">
+                  <span className="material-icons notification-icon">{notification.icon}</span>
+                </div>
+                <div className="notification-content">
+                  <p className="notification-message">{notification.message}</p>
+                  <span className="notification-time">{notification.time}</span>
+                </div>
               </div>
             ))}
           </div>
